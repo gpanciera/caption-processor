@@ -1,0 +1,23 @@
+1:00:00:00
+Speaker One
+Hello, this is the first line of speech.
+
+1:00:05:00
+Speaker One
+And this is a continuation of the first speaker's speech.
+
+1:00:10:00
+Speaker Two
+Now, the second speaker will take over.
+
+1:00:15:00
+Speaker Two
+This is more speech from the second speaker.
+
+1:00:20:00
+Speaker One
+Back to the first speaker again.
+
+1:00:25:00
+Speaker One
+Ending the first speaker's part.

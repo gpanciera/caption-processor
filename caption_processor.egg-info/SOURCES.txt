@@ -1,0 +1,12 @@
+README.md
+setup.py
+caption_processor.egg-info/PKG-INFO
+caption_processor.egg-info/SOURCES.txt
+caption_processor.egg-info/dependency_links.txt
+caption_processor.egg-info/entry_points.txt
+caption_processor.egg-info/top_level.txt
+src/__init__.py
+src/main.py
+src/processor.py
+tests/__init__.py
+tests/test_processor.py
