@@ -12,6 +12,7 @@ def process_captions(input_file, output_file):
     - Remove timecode lines
     - Consolidate consecutive speech from same speaker
     - Format speaker names in bold
+    - Convert first character of appended text to lowercase if previous text doesn't end with period
     """
     with open(input_file, 'r', encoding='utf-8') as infile:
         content = infile.read()
@@ -44,6 +45,13 @@ def process_captions(input_file, output_file):
         
         if speaker == previous_speaker and processed_blocks:
             # Same speaker as previous block, append text to previous block
+            previous_text = processed_blocks[previous_block_index]
+            
+            # Check if previous text ends with a period
+            if not previous_text.rstrip().endswith('.') and text:
+                # Convert first character to lowercase if it doesn't end with period
+                text = text[0].lower() + text[1:] if len(text) > 0 else text
+                
             processed_blocks[previous_block_index] += ' ' + text
         else:
             # New speaker, create a new block

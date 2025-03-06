@@ -5,8 +5,9 @@ The Caption Processor is a command-line utility designed to process SMPTE Timeco
 
 ## Features
 - Removes all lines containing timecode.
-- Consolidates speech from the same speaker into a single block.
 - Formats speaker names in bold followed by a colon.
+- Consolidates speech from the same speaker into a single block.
+- Convert first character of appended text to lowercase if previous text doesn't end with period
 
 ## Installation
 To install the required dependencies, run:
@@ -36,25 +37,10 @@ This is very frustrating.
 To run the utility, use the following command in the terminal:
 
 ```
-python src/main.py <input_file> <output_file>
+python src/main.py <input_file> <output_file>.md
 ```
 
 Replace `<input_file>` with the path to your input file containing the SMPTE Timecode-based captions, and `<output_file>` with the desired path for the output file.
-
-## Testing
-To run the tests, navigate to the `tests` directory and execute:
-
-```
-pytest
-```
-
-This will run all unit tests defined in the `test_processor.py` file.
-
-## Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any enhancements or bug fixes.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 
 # To run command from anywhere
@@ -66,6 +52,29 @@ pipx ensurepath
 
 ## Install this package
 ```
-cd /Users/gpanciera/caea/video-interview-parser/caption-processor
+cd to this application directory
 pipx install .
 ```
+
+## To update pipx with changes made to this repo
+```
+pipx install --force .
+```
+
+## Testing
+To run the tests, navigate to the `tests` directory and execute:
+
+```
+pytest
+```
+
+This will run all unit tests defined in the `test_processor.py` file.
+
+
+## Contributing
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any enhancements or bug fixes.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+
